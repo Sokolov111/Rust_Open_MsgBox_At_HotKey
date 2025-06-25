@@ -1,0 +1,21 @@
+[package]
+name = "apihooking"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "apihooking"
+path = "src/main.rs"
+
+[dependencies]
+winapi = { version = "0.3", features = [
+    "winuser",
+    "libloaderapi",
+    "minwindef",
+    "windef",
+    "basetsd",
+    "ntdef",
+    "processthreadsapi"
+] }
+user32-sys = "0.2.0"
+crossterm = "0.16.0"
